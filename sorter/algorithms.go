@@ -35,27 +35,17 @@ func InsertionSort(n []int) {
 	fmt.Println(n)
 }
 
-func SelectionSort(n []int) {
-	var i = 1
-	for i < len(n)-1 {
-		var j = i + 1
-		var minIndex = i
-
-		if j < len(n) {
-			if n[j] < n[minIndex] {
-				minIndex = j
+func SelectionSort(items []int) {
+	var n = len(items)
+	for i := 0; i < n; i++ {
+		var minIdx = i
+		for j := i; j < n; j++ {
+			if items[j] < items[minIdx] {
+				minIdx = j
 			}
-			j++
 		}
-
-		if minIndex != i {
-			var temp = n[i]
-			n[i] = n[minIndex]
-			n[minIndex] = temp
-		}
-
-		i++
+		items[i], items[minIdx] = items[minIdx], items[i]
 	}
 
-	fmt.Println(n)
+	fmt.Println(items)
 }

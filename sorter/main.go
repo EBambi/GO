@@ -25,10 +25,13 @@ func main() {
 
 	switch option {
 	case 1:
+		fmt.Println("Using: Bubble Sort")
 		BubbleSort(arrayToSort)
 	case 2:
+		fmt.Println("Using: Insertion Sort")
 		InsertionSort(arrayToSort)
 	case 3:
+		fmt.Println("Using: Selection Sort")
 		SelectionSort(arrayToSort)
 	}
 }
